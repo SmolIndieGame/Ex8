@@ -1,0 +1,402 @@
+body {
+    font-family: "Segoe UI", SegoeUI, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    padding: 0 64px;
+    max-width: 1600px;
+    margin: auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    font-size: 13px;
+    padding: 8px 0 16px;
+}
+
+header .left,
+header .right {
+    display: flex;
+    justify-content: flex-start;
+    align-items: end;
+    gap: 24px;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+header .left {
+    overflow: hidden;
+}
+
+header.right {
+    flex-shrink: 0;
+}
+
+header.left div,
+header .right div {
+    padding-bottom: 2px;
+}
+
+header .logo {
+    width: 108px;
+    padding-right: 16px;
+}
+
+.banner {
+    position: relative;
+}
+
+.banner .back {
+    width: 100%;
+    height: 550px;
+    background-image: url(img/slide1.webp);
+    background-position: center;
+}
+
+.banner .inside {
+    position: absolute;
+    top: 50%;
+    left: 66%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.banner .inside h1 {
+    margin: 0;
+    padding: 0;
+    font-weight: 500;
+}
+
+.banner .inside a {
+    margin-top: 10px;
+    padding: 8px 14px 10px;
+    border-radius: 2px;
+    font-weight: 500;
+    color: white;
+    text-decoration: none;
+    background-color: rgb(0, 103, 184);
+}
+
+.banner-m {
+    display: none;
+    flex-direction: column;
+}
+
+.banner-m .back {
+    display: block;
+    width: 100%;
+}
+
+.banner-m .inside {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    gap: 20px;
+    padding: 16px 16px 48px 16px;
+}
+
+.banner-m .inside h1 {
+    margin: 0;
+    padding: 0;
+    font-weight: 500;
+}
+
+.banner-m .inside a {
+    margin-top: 10px;
+    padding: 8px 14px 10px;
+    border-radius: 2px;
+    font-weight: 500;
+    color: white;
+    text-decoration: none;
+    background-color: rgb(0, 103, 184);
+}
+
+.featured {
+    display: flex;
+    justify-content: center;
+    gap: 64px;
+    margin: 128px 0 64px;
+    flex-wrap: wrap;
+    padding: 0;
+    list-style-type: none;
+}
+
+.featured li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 1;
+}
+
+.featured li img {
+    display: block;
+}
+
+.featured li a {
+    margin-top: 12px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.slides {
+    display: flex;
+    gap: 24px;
+}
+
+.slides-title {
+    margin: 0;
+    padding-bottom: 16px;
+    font-weight: 500;
+    font-size: 26px;
+}
+
+.slides .section {
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: start;
+    justify-content: start;
+}
+
+.slides .section .badge {
+    margin: 0;
+    align-self: start;
+    padding: 2px 12px 3px;
+    background-color: rgb(255, 185, 0);
+    box-sizing: border-box;
+    font-weight: 500;
+}
+
+.slides .section .space {
+    margin: 0;
+    align-self: start;
+    height: 26px;
+    box-sizing: border-box;
+}
+
+.slides .section img {
+    width: 100%;
+}
+
+.slides .section a {
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.slides .section a:hover {
+    text-decoration: underline;
+}
+
+.slides .section h2 {
+    margin: 0;
+    padding: 0;
+    font-weight: 500;
+}
+
+.end {
+    display: flex;
+    gap: 24px;
+    padding: 128px 0 64px;
+    align-items: center;
+}
+
+.end img {
+    display: block;
+    width: 32px;
+}
+
+footer {
+    background-color: rgb(242, 242, 242);
+}
+
+footer .container {
+    color: #616161;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 24px 64px;
+}
+
+footer .container .left {
+    flex-shrink: 0;
+}
+
+footer .container .right {
+    display: flex;
+    gap: 24px;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    overflow: hidden;
+    justify-content: end;
+}
+
+
+@media (max-width: 640px) {
+    header {
+        display: none;
+    }
+
+    .container {
+        padding: 0 16px;
+    }
+
+    .banner {
+        display: none;
+    }
+
+    .banner-m {
+        display: flex;
+    }
+
+    .banner .back {
+        height: 360px;
+        background-size: cover;
+        background-image: url(img/slide1-m.webp);
+        padding-bottom: 360px;
+    }
+
+    .banner .inside {
+        position: static;
+        top: 50%;
+        left: 66%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        align-items: start;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .banner .inside h1 {
+        margin: 0;
+        padding: 0;
+        font-weight: 500;
+    }
+
+    .banner .inside a {
+        margin-top: 10px;
+        padding: 8px 14px 10px;
+        border-radius: 2px;
+        font-weight: 500;
+        color: white;
+        text-decoration: none;
+        background-color: rgb(0, 103, 184);
+    }
+
+    .slides {
+        flex-direction: column;
+    }
+
+    .end {
+        padding: 64px 0 48px;
+    }
+
+    footer .container {
+        flex-direction: column;
+        padding: 24px 16px;
+    }
+
+    footer .container .right {
+        margin-top: 16px;
+        flex-wrap: wrap;
+        justify-content: left;
+        row-gap: 4px;
+    }
+}
+
+/* links */
+a {
+    color: #0067b8;
+}
+
+.link {
+    color: inherit;
+    text-decoration: none;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+.hlink {
+    color: inherit;
+    text-decoration: none;
+}
+
+.hlink:hover {
+    text-decoration: underline;
+}
+
+/* icons */
+.search,
+.cart,
+.signin {
+    position: relative;
+    padding-right: 20px;
+    text-wrap: nowrap;
+}
+
+.signin {
+    padding-right: 36px;
+}
+
+.search::after {
+    content: url(svg/search.svg);
+    position: absolute;
+    right: -2px;
+    top: 2px;
+}
+
+.cart::after {
+    content: url(svg/cart.svg);
+    position: absolute;
+    right: -2px;
+    top: 2px;
+}
+
+.signin::after {
+    content: url(svg/signin.svg);
+    position: absolute;
+    right: -2px;
+    top: -6px;
+}
+
+.world {
+    position: relative;
+    padding-left: 36px;
+}
+
+.world::after {
+    content: url(svg/world.svg);
+    position: absolute;
+    left: -2px;
+    top: -7px;
+}
+
+.slides .section a {
+    position: relative;
+    padding-right: 24px;
+}
+
+.slides .section a::after {
+    content: url(svg/arrow.svg);
+    position: absolute;
+    right: -2px;
+    transition: all 0.2s;
+}
+
+.slides .section a:hover::after {
+    right: -6px;
+}
