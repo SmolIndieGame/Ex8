@@ -47,6 +47,10 @@ header .logo {
     padding-right: 16px;
 }
 
+.header-m {
+    display: none;
+}
+
 .banner {
     position: relative;
 }
@@ -246,16 +250,30 @@ footer .container .right {
 
 @media (max-width: 640px) {
     header {
-        justify-content: center;
+        justify-content: space-between;
         border-bottom: 1px solid rgb(185, 185, 185);
     }
 
-    header .left {
+    .header {
         display: none;
     }
 
-    header .right {
-        display: none;
+    .header-m {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .header-m img {
+        display: block;
+    }
+
+    .header-m .logo {
+        padding: 0;
+    }
+
+    .header-m .space {
+        flex-grow: 1;
     }
 
     .container {
